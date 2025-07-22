@@ -26,11 +26,13 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					foreground: 'hsl(var(--secondary-foreground))',
+					glow: 'hsl(var(--secondary-glow))'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -51,6 +53,10 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				'earth-green': {
+					DEFAULT: 'hsl(var(--earth-green))',
+					glow: 'hsl(var(--earth-green-glow))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -84,11 +90,51 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'sacred-pulse': {
+					'0%, 100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					},
+					'50%': {
+						transform: 'scale(1.05)',
+						opacity: '0.8'
+					}
+				},
+				'wisdom-float': {
+					'0%, 100%': {
+						transform: 'translateY(0px) rotate(0deg)'
+					},
+					'50%': {
+						transform: 'translateY(-10px) rotate(1deg)'
+					}
+				},
+				'ethereal-glow': {
+					'0%, 100%': {
+						filter: 'brightness(1) drop-shadow(0 0 10px hsl(var(--primary) / 0.3))'
+					},
+					'50%': {
+						filter: 'brightness(1.1) drop-shadow(0 0 20px hsl(var(--primary) / 0.6))'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'sacred-pulse': 'sacred-pulse 3s ease-in-out infinite',
+				'wisdom-float': 'wisdom-float 4s ease-in-out infinite',
+				'ethereal-glow': 'ethereal-glow 2s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'gradient-sacred': 'var(--gradient-sacred)',
+				'gradient-wisdom': 'var(--gradient-wisdom)',
+				'gradient-earth': 'var(--gradient-earth)',
+				'gradient-ethereal': 'var(--gradient-ethereal)'
+			},
+			boxShadow: {
+				'sacred': 'var(--shadow-sacred)',
+				'wisdom': 'var(--shadow-wisdom)',
+				'ethereal': 'var(--shadow-ethereal)'
 			}
 		}
 	},
